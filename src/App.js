@@ -1,7 +1,9 @@
+import FeedbackWidget from "./components/FeedbackWidget";
+
 function App() {
   return (
     <div className="App">
-      <h1>Feedback Widget</h1>
+      <FeedbackWidget />
     </div>
   );
 }

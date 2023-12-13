@@ -1,0 +1,26 @@
+:root {
+  --base: #3457dc;
+}
+.brand__feedbackWidget {
+  font-family: sans-serif;
+  .feedbackWidget__container {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    .feedbackWidget__title {
+      margin: 5px 0;
+      font-size: 20px;
+    }
+    .feedbackWidget__btn--submit {
+      border: 0;
+      background-color: var(--base);
+      color: #fff;
+      font-weight: 500;
+      padding: 8px 24px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}

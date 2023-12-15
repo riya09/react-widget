@@ -19,12 +19,22 @@ const FeedbackWidget = (props) => {
         <h1 className="feedbackWidget__title">
           {titleText}
         </h1>
-        <button
+        <div className="feedbackWidget__rating">
+          {[...Array(5)].map((_, k) => (
+            <label htmlFor={k+1} key={k}>
+              <input id={k+1} type="radio" name="rating" value={k+1} />
+              <span>{k + 1}</span>
+            </label>
+          ))}
+        </div>
+        <div className="feedbackWidget__btn--container">
+          <button
           className="feedbackWidget__btn--submit"
           onClick={handleSubmit}
         >
           { buttonText }
         </button>
+        </div>
       </div>
     </div>
   );

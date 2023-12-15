@@ -12,15 +12,43 @@
     .feedbackWidget__title {
       margin: 5px 0;
       font-size: 20px;
+      margin-bottom: 16px;
     }
-    .feedbackWidget__btn--submit {
-      border: 0;
-      background-color: var(--base);
-      color: #fff;
-      font-weight: 500;
-      padding: 8px 24px;
-      border-radius: 4px;
-      cursor: pointer;
+    .feedbackWidget__rating {
+      margin-bottom: 16px;
+      label {
+        cursor: pointer;
+        &:not(:last-of-type) {
+          margin-right: 12px;
+        }
+        input {
+          display: none;
+          &:checked + span {
+            background-color: var(--base);
+            color: #fff;
+          }
+        }
+        span {
+          color: var(--base);
+          font-weight: 600;
+          border: 1px solid var(--base);
+          padding: 6px 12px;
+          border-radius: 4px;
+          display: inline-block;
+        }
+      }
+    }
+    .feedbackWidget__btn--container {
+      text-align: right;
+      .feedbackWidget__btn--submit {
+        border: 0;
+        background-color: var(--base);
+        color: #fff;
+        font-weight: 500;
+        padding: 8px 24px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
     }
   }
 }

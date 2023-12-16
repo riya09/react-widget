@@ -22,9 +22,9 @@ const FeedbackWidget = (props) => {
   return (
     <div className="brand__feedbackWidget">
       <div className="feedbackWidget__container">
-        <h1 className="feedbackWidget__title">
+        <h4 className="feedbackWidget__title">
           {titleText}
-        </h1>
+        </h4>
         <div className="feedbackWidget__rating">
           {[...Array(5)].map((_, k) => (
             <label htmlFor={k + 1} key={k}>

@@ -4,34 +4,34 @@ import './widget.scss'
 
 const FeedbackWidget = (props) => {
   const {
-    titleText = 'Rate your experience',
+    titleText = 'Help Us Improve with Your Valuable Feedback!',
     buttonText = 'Submit',
     themeColor = '#3457dc',
     handleSubmit = () => {},
   } = props;
 
   const [rating, setRating] = useState(null);
-  const [hideWidget, toggleVisibility] = useState(true)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     document.documentElement.style.setProperty('--base', themeColor);
   }, [themeColor]);
 
   useEffect(() => {
-    toggleVisibility(false)
+    setMounted(true)
   }, [])
 
   const submitRating = () => {
     handleSubmit(rating)
-    toggleVisibility(true)
+    setMounted(false)
   }
 
   return (
     <div className="brand__feedbackWidget">
-      <div className={`feedbackWidget__container${hideWidget ? " hidden" : ""}`}>
+      <div className={`feedbackWidget__container ${mounted ? "visible" : ""}`}>
         <div className="feedbackWidget__header">
           <h4 className="feedbackWidget__title">{titleText}</h4>
-          <span onClick={() => toggleVisibility(true)}>
+          <span onClick={() => setMounted(false)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

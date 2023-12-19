@@ -1,19 +1,19 @@
 .brand__feedbackWidget {
-  font-family: sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 10px;
   .feedbackWidget__container {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    max-width: 320px;
     width: 100%;
     padding: 12px;
     border-radius: 8px;
     position: fixed;
     bottom: 8px;
     right: 8px;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 110%, 0);
     transition: transform 0.4s ease-out;
-    &.hidden {
-      transform: translate3d(0, 110%, 0);
+    &.visible {
+      transform: translate3d(0, 0, 0);
     }
     .feedbackWidget__header {
       display: flex;
@@ -22,8 +22,9 @@
       margin-bottom: 16px;
       .feedbackWidget__title {
         margin: 5px 0;
-        font-size: 1.6em;
+        font-size: 1.5em;
         color: var(--base);
+        line-height: 1.4em;
       }
       span {
         cursor: pointer;

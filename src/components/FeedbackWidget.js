@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Rating from './Rating';
 import './widget.scss'
 
 const FeedbackWidget = (props) => {
@@ -43,20 +44,7 @@ const FeedbackWidget = (props) => {
             </svg>
           </span>
         </div>
-        <div className="feedbackWidget__rating">
-          {[...Array(5)].map((_, k) => (
-            <label htmlFor={k + 1} key={k}>
-              <input
-                onChange={() => setRating(k + 1)}
-                id={k + 1}
-                type="radio"
-                name="rating"
-                value={k + 1}
-              />
-              <span>{k + 1}</span>
-            </label>
-          ))}
-        </div>
+        <Rating getRating={(val) => setRating(val)}/>
         <div className="feedbackWidget__btn--container">
           <button
             className="feedbackWidget__btn--submit"

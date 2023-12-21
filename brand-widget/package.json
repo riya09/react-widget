@@ -1,0 +1,11 @@
+{
+  "name": "brand-widget",
+  "version": "1.0.0",
+  "author": "Riya",
+  "description": "Embedded widget for collecting user's feedback",
+  "main": "index.js",
+  "module": "index.js",
+  "exports": {
+    ".": "./index.js"
+  }
+}

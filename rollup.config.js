@@ -19,7 +19,6 @@ export default {
     postcss({
       extract: 'widget.css',
       plugins: [cssnano()],
-      modules: true
     }),
     babel({
       exclude: 'node_modules/**'

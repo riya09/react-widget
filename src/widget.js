@@ -30,6 +30,4 @@ const feedbackWidget = {
     );
   },
 };
-// window.feedbackWidget = feedbackWidget
 export { feedbackWidget };
-// export default feedbackWidget;

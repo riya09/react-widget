@@ -1,4 +1,5 @@
 # Building a React widget
+Tutorial : https://fariabriya.codes/blog/building-cross-framework-widget-with-react/
 
 In the project directory, you can run:
 

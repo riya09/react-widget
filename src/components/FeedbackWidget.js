@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import Rating from './Rating';
-import './widget.scss'
+import './feedback.scss'
 
 const FeedbackWidget = (props) => {
   const {
-    titleText = 'Help Us Improve with Your Valuable Feedback!',
+    title = 'Help Us Improve with Your Valuable Feedback!',
     buttonText = 'Submit',
-    themeColor = '#3457dc',
+    theme = '#3457dc',
     handleSubmit = () => {},
   } = props;
 
@@ -15,7 +15,7 @@ const FeedbackWidget = (props) => {
 
   useEffect(() => {
     document.documentElement.style.setProperty('--base', themeColor);
-  }, [themeColor]);
+  }, [theme]);
 
   useEffect(() => {
     setMounted(true)
@@ -30,7 +30,7 @@ const FeedbackWidget = (props) => {
     <div className="brand__feedbackWidget">
       <div className={`feedbackWidget__container ${mounted ? "visible" : ""}`}>
         <div className="feedbackWidget__header">
-          <h4 className="feedbackWidget__title">{titleText}</h4>
+          <h4 className="feedbackWidget__title">{title}</h4>
           <span onClick={() => setMounted(false)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

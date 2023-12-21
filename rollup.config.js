@@ -10,15 +10,16 @@ export default {
   input: './src/widget.js',
   output: [
     {
-      file: './package/component/index.js',
+      file: './brand-widget/index.js',
       format: 'cjs'
     },
   ],
   plugins: [
     external(),
     postcss({
-      extract: 'index.css',
-      plugins: [cssnano()]
+      extract: 'widget.css',
+      plugins: [cssnano()],
+      modules: true
     }),
     babel({
       exclude: 'node_modules/**'

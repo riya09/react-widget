@@ -21,9 +21,9 @@ const feedbackWidget = {
     root.render(
       <React.StrictMode>
         <FeedbackWidget
-          titleText={title}
+          title={title}
           buttonText={buttonText}
-          themeColor={theme}
+          theme={theme}
           handleSubmit={(val) => handleSubmit(val)}
         />
       </React.StrictMode>
@@ -32,4 +32,4 @@ const feedbackWidget = {
 };
 // window.feedbackWidget = feedbackWidget
 export { feedbackWidget };
-export default feedbackWidget;
+// export default feedbackWidget;

@@ -14,7 +14,7 @@ const FeedbackWidget = (props) => {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    document.documentElement.style.setProperty('--base', themeColor);
+    document.documentElement.style.setProperty('--base', theme);
   }, [theme]);
 
   useEffect(() => {
